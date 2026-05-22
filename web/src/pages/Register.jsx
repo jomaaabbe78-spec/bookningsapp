@@ -13,8 +13,8 @@ export default function Register() {
       const { data } = await api.post('/auth/register', form);
       localStorage.setItem('token', data.token);
       nav('/dashboard');
-    } catch {
-      setError('Kunde inte registrera. Email kanske redan används.');
+    } catch (err) {
+      setError(err.response?.data?.error || 'Kunde inte registrera. Försök igen.');
     }
   };
 
@@ -22,10 +22,10 @@ export default function Register() {
     <div style={styles.wrap}>
       <h2>Registrera företag</h2>
       {error && <p style={styles.error}>{error}</p>}
-      <form onSubmit={submit} style={styles.form}>
-        <input placeholder="Företagsnamn" value={form.name} onChange={e => setForm({...form, name: e.target.value})} required />
-        <input placeholder="Email" type="email" value={form.email} onChange={e => setForm({...form, email: e.target.value})} required />
-        <input placeholder="Lösenord" type="password" value={form.password} onChange={e => setForm({...form, password: e.target.value})} required />
+      <form onSubmit={submit} style={styles.form} autoComplete="off">
+        <input placeholder="Företagsnamn" value={form.name} onChange={e => setForm({...form, name: e.target.value})} required autoComplete="organization" />
+        <input placeholder="Email" type="email" autoComplete="off" value={form.email} onChange={e => setForm({...form, email: e.target.value})} required />
+        <input placeholder="Lösenord" type="password" autoComplete="new-password" value={form.password} onChange={e => setForm({...form, password: e.target.value})} required />
         <select value={form.type} onChange={e => setForm({...form, type: e.target.value})}>
           <option value="frisör">Frisör</option>
           <option value="städbolag">Städbolag</option>
