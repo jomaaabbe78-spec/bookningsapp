@@ -17,4 +17,4 @@ Welcome to Bokningsapp - a complete booking solution for businesses.
 2. Hämta Secret Key från Dashboard
 3. Skapa ett månadsabonnemang under Products → skapa ett pris → kopiera Price ID
 
-### 3. Backend
+### 3. Backend```
