@@ -1,6 +1,6 @@
 # Bokningsapp
 
-## Welcome! 👋
+## Welcomee! 👋
 
 Welcome to Bokningsapp - a complete booking solution for businesses.
 
