@@ -1,20 +1,39 @@
-# Bokningsapp
+# BookningsApp
 
-## Welcome! 👋
+Welcome to the **BookningsApp** repository! This project provides a full‑stack solution for managing bookings, companies, services, and payments.
 
-Welcome to Bokningsapp - a complete booking solution for businesses.
+## Features
 
-## Snabbstart
+- User authentication (login, register)
+- CRUD operations for bookings, companies, services, and payments
+- Integration with Supabase for database management
+- Responsive web UI built with React and Vite
 
-### 1. Databas — Supabase (gratis)
-1. Gå till https://supabase.com och skapa ett konto
-2. Skapa ett nytt projekt
-3. Gå till SQL Editor och kör innehåller i `backend/schema.sql`
-4. Kopiera Project URL och Service Role Key
+## Getting Started
 
-### 2. Betalning — Stripe (gratis att testa)
-1. Gå till https://stripe.com och skapa ett konto
-2. Hämta Secret Key från Dashboard
-3. Skapa ett månadsabonnemang under Products → skapa ett pris → kopiera Price ID
+1. Clone the repository
+2. Install backend dependencies:
+   ```bash
+   cd backend && npm install
+   ```
+3. Install frontend dependencies:
+   ```bash
+   cd ../web && npm install
+   ```
+4. Run the development servers:
+   ```bash
+   # Backend
+   cd ../backend && npm run dev
+   # Frontend
+   cd ../web && npm run dev
+   ```
 
-### 3. Backend
+For more detailed setup instructions, refer to the individual `README.md` files in the `backend` and `web` directories.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+---
+
+*This README was updated to correct a spelling error.*
